@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\DotmeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+//Rota create - metodo post
+Route::post('cadastro' , [DotmeController::class, 'create'])->name('cadastro.post');
 
 Route::get('/', function () {
     return view('index');
